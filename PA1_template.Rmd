@@ -63,6 +63,8 @@ for(i in 1:nrow(averageByInterval)) {
 }
 ```
 
+For my strategy, I am going to replace NA entries with the previously computed means. I put those means into internalEnv and when I encountered a NA value, I replace it with the corresponding value from intervalEnv.
+
 ```{r echo=TRUE}
 filled <- rawActivity
 dayType <- toString(filled$date)
